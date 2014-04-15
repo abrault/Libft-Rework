@@ -6,7 +6,7 @@
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/15 15:51:32 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/15 15:51:59 by abrault          ###   ########.fr       */
+/*   Updated: 2014/04/15 18:15:34 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,9 @@ char	*ft_strstr(const char *str_1, const char *str_2);
 char	*ft_strtok(char *str, char sepa);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
+
+int		ft_putendl(char *str);
+int		ft_putstr(char *str);
+void	ft_putchar(char c);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: abrault <abrault@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/04/14 11:17:08 by abrault           #+#    #+#              #
-#    Updated: 2014/04/15 15:59:51 by abrault          ###   ########.fr        #
+#    Updated: 2014/04/15 18:17:37 by abrault          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,10 @@ SRC = src/ft_atoi.c \
 	  src/ft_strrchr.c \
 	  src/ft_strstr.c \
 	  src/ft_tolower.c \
-	  src/ft_toupper.c
+	  src/ft_toupper.c \
+	  src/ft_putstr.c \
+	  src/ft_putendl.c \
+	  src/ft_putchar.c
 
 OBJ = $(SRC:.c=.o)
 
