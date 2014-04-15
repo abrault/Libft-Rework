@@ -6,18 +6,17 @@
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 09:15:29 by abrault           #+#    #+#             */
-/*   Updated: 2014/03/04 16:41:10 by abrault          ###   ########.fr       */
+/*   Updated: 2014/04/15 16:01:38 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <libft.h>
 
-int		ft_strncmp(const char * str1, const char * str2, int n)
+int		ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int		i;
+	size_t	i;
 	int		result;
-	
+
 	i = 0;
 	if (str1 == NULL && str2 == NULL)
 		return (0);

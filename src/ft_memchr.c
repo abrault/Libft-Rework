@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/04/14 12:40:01 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/14 18:10:59 by abrault          ###   ########.fr       */
+/*   Created: 2014/04/15 15:39:31 by abrault           #+#    #+#             */
+/*   Updated: 2014/04/15 15:39:44 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memchr(void *ptr, int value, size_t num)
 {
-	char	*p;
+	char	*str;
 	size_t	i;
 
 	i = 0;
-	if (len)
+	while (i < num)
 	{
-		p = b;
-		while (i < len)
-		{
-			p[i] = c;
-			i++;
-		}
+		str = ptr + i;
+		if (value == *str)
+			return (ptr + i);
+		i++;
 	}
-	return (b);
+	return (NULL);
 }

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/04/14 17:57:35 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/14 18:10:52 by abrault          ###   ########.fr       */
+/*   Created: 2014/04/15 15:40:28 by abrault           #+#    #+#             */
+/*   Updated: 2014/04/15 15:40:37 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_bzero(void *b, size_t len)
+void	*ft_memcpy(void *destination, const void *source, size_t num)
 {
-	char	*p;
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	if (len)
+	while (i < num)
 	{
-		p = b;
-		while (i < len)
-		{
-			p[i] = 0;
-			i++;
-		}
+		str1 = (unsigned char*)destination + i;
+		str2 = (unsigned char*)source + i;
+		*str1 = *str2;
+		i++;
 	}
-	return (b);
+	return (destination);
 }

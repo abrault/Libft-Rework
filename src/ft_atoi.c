@@ -6,21 +6,21 @@
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/10 13:55:10 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/14 18:21:03 by abrault          ###   ########.fr       */
+/*   Updated: 2014/04/15 16:00:09 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int		number;
-	int		isNeg;
+	int		isneg;
 	int		i;
 
 	number = 0;
 	i = 0;
-	isNeg = 0;
+	isneg = 0;
 	while (i <= ft_strlen(str))
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -28,14 +28,14 @@ int	ft_atoi(const char *str)
 		else if (str[i] > '9' || (str[i] < '0' && i > 0))
 			break ;
 		else if (str[0] == '-' && i == 0)
-			isNeg = 1;
+			isneg = 1;
 		else if (str[0] == '+' && i == 0)
 			;
 		else
 			break ;
 		i++;
 	}
-	if (isNeg)
+	if (isneg)
 		number = 0 - number;
 	return (number);
 }

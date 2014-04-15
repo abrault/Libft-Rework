@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/03 17:43:35 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/15 15:26:07 by abrault          ###   ########.fr       */
+/*   Created: 2014/04/15 15:45:45 by abrault           #+#    #+#             */
+/*   Updated: 2014/04/15 16:07:53 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <libft.h>
 
-char	*ft_strstr(const char *str_1, const char *str_2)
+char	*ft_strncpy(char *desti, const char *source, size_t size)
 {
-	int		i;
-	int		j;
-	int		mem;
+	size_t	i;
 
+	if (desti == NULL || source == NULL || size == 0)
+		return (desti);
 	i = 0;
-	j = 0;
-	mem = 0;
-	if (str_1 == NULL || str_2 == NULL)
-		return (NULL);
-	while (str_1[i] != '\0')
+	while (i < size && (desti[i] != 0 && source[i] != 0))
 	{
-		if (str_1[i] == str_2[j])
-		{
-			if (j == 0)
-				mem = i;
-			j++;
-		}
-		else
-			j = 0;
-		if (j == ft_strlen(str_2))
-			return ((char*)str_1 + mem);
+		desti[i] = source[i];
 		i++;
 	}
-	return (NULL);
+	return (desti);
 }

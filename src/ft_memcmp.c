@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/03 17:43:35 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/15 15:26:07 by abrault          ###   ########.fr       */
+/*   Created: 2014/04/15 15:39:53 by abrault           #+#    #+#             */
+/*   Updated: 2014/04/15 15:40:17 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <libft.h>
 
-char	*ft_strstr(const char *str_1, const char *str_2)
+int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
-	int		i;
-	int		j;
-	int		mem;
+	size_t		i;
+	const char	*p1;
+	const char	*p2;
 
 	i = 0;
-	j = 0;
-	mem = 0;
-	if (str_1 == NULL || str_2 == NULL)
-		return (NULL);
-	while (str_1[i] != '\0')
+	while (i < num)
 	{
-		if (str_1[i] == str_2[j])
-		{
-			if (j == 0)
-				mem = i;
-			j++;
-		}
-		else
-			j = 0;
-		if (j == ft_strlen(str_2))
-			return ((char*)str_1 + mem);
+		p1 = ptr1 + i;
+		p2 = ptr2 + i;
+		if (*p1 != *p2)
+			return (*p1 - *p2);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrault <abrault@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/03 17:43:35 by abrault           #+#    #+#             */
-/*   Updated: 2014/04/15 15:26:07 by abrault          ###   ########.fr       */
+/*   Created: 2014/04/15 15:44:14 by abrault           #+#    #+#             */
+/*   Updated: 2014/04/15 15:45:29 by abrault          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <libft.h>
 
-char	*ft_strstr(const char *str_1, const char *str_2)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int		i;
-	int		j;
-	int		mem;
+	size_t	i;
+	int		a;
 
 	i = 0;
-	j = 0;
-	mem = 0;
-	if (str_1 == NULL || str_2 == NULL)
-		return (NULL);
-	while (str_1[i] != '\0')
+	a = 0;
+	if (dest == NULL || src == NULL || n == 0)
+		return (dest);
+	while (dest[a] != '\0')
+		a++;
+	while (src[i] != '\0' && i < n)
 	{
-		if (str_1[i] == str_2[j])
-		{
-			if (j == 0)
-				mem = i;
-			j++;
-		}
-		else
-			j = 0;
-		if (j == ft_strlen(str_2))
-			return ((char*)str_1 + mem);
+		dest[a + i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dest[a + i] = '\0';
+	return (dest);
 }
