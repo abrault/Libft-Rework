@@ -15,8 +15,8 @@
 char	*ft_strnstr(const char *str_1, const char *str_2, size_t n)
 {
 	size_t	i;
-	int		j;
-	int		mem;
+	int	j;
+	int	mem;
 
 	i = 0;
 	j = 0;

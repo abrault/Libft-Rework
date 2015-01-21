@@ -17,18 +17,18 @@
 
 # define MIN(a,b) (a < b ? a : b)
 
-int		ft_atoi(const char *str);
-int		ft_strlen(const char *str);
-int		ft_isalnum(int n);
-int		ft_isalpha(int n);
-int		ft_isascii(int n);
-int		ft_isdigit(int n);
-int		ft_isprint(int n);
-int		ft_strcmp(const char *str1, const char *str2);
-int		ft_strncmp(const char *str1, const char *str2, size_t n);
-int		ft_tolower(int n);
-int		ft_toupper(int n);
-int		ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
+int	ft_atoi(const char *str);
+int	ft_strlen(const char *str);
+int	ft_isalnum(int n);
+int	ft_isalpha(int n);
+int	ft_isascii(int n);
+int	ft_isdigit(int n);
+int	ft_isprint(int n);
+int	ft_strcmp(const char *str1, const char *str2);
+int	ft_strncmp(const char *str1, const char *str2, size_t n);
+int	ft_tolower(int n);
+int	ft_toupper(int n);
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *ptr, int charac, int num);
@@ -50,8 +50,8 @@ char	*ft_strtok(char *str, char sepa);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
 
-int		ft_putendl(char *str);
-int		ft_putstr(char *str);
+int	ft_putendl(char *str);
+int	ft_putstr(char *str);
 void	ft_putchar(char c);
 
 #endif

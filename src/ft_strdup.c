@@ -14,9 +14,9 @@
 
 void	*ft_strdup(const char *str)
 {
-	int		lenght;
+	int	lenght;
 	char	*new_string;
-	int		i;
+	int	i;
 
 	if (str == NULL)
 		return (NULL);

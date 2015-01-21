@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *str, int c_ascii)
 {
 	char	n;
-	int		i;
+	int	i;
 
 	if (str == NULL)
 		return (NULL);

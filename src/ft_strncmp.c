@@ -15,7 +15,7 @@
 int		ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
-	int		result;
+	int	result;
 
 	i = 0;
 	if (str1 == NULL && str2 == NULL)
